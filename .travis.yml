@@ -1,9 +1,5 @@
-language: ruby
-
 services:
   - docker
 
 before_install:
   - docker build -t himaraj/new:1.0 .
-  - docker images
-  - docker ps -a
