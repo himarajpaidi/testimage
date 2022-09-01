@@ -5,5 +5,9 @@ services:
   - docker
 before script:
   - pip install docker
+  - docker login -u $DOCKER_USER -P $DOCKER_PASSWORD
 script:
   - docker build -t himaraj/new:1.0 .
+  - docker images
+  - docker ps -a
+  - docker push himaraj/new:latest
