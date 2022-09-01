@@ -1,5 +1,9 @@
+language: python
+python:
+  - "3.6"
 services:
   - docker
-
-before_install:
+before script:
+  - pip install docker
+script:
   - docker build -t himaraj/new:1.0 .
